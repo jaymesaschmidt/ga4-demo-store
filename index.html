@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trailhead Supply | Home</title>
+
+  <!-- STEP 6: Paste the GTM <script> snippet here, as high in <head> as possible. -->
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; color: #222; background: #fafafa; }
+    header { background: #2f4f3a; color: #fff; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    header a { color: #fff; text-decoration: none; margin-left: 16px; }
+    header a:first-child { margin-left: 0; }
+    main { max-width: 900px; margin: 0 auto; padding: 24px; }
+    .hero { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 32px; text-align: center; }
+    .btn { display: inline-block; background: #e07b39; color: #fff; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; text-decoration: none; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 24px; }
+    .card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 16px; }
+    footer { text-align: center; padding: 24px; color: #777; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <!-- STEP 6: Paste the GTM <noscript> snippet here, right after the opening <body> tag. -->
+
+  <header>
+    <strong>Trailhead Supply</strong>
+    <nav>
+      <a href="index.html" id="nav-home">Home</a>
+      <a href="product.html" id="nav-product">Shop</a>
+      <a href="thanks.html" id="nav-contact">Contact</a>
+      <span id="cart-count">Cart: 0</span>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Gear for your next trail</h1>
+      <p>A demo store for practicing GA4 and Google Tag Manager.</p>
+      <a href="product.html" class="btn" id="hero-cta">Shop the Trail Pack</a>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h3>Free shipping</h3>
+        <p>On orders over $50.</p>
+      </div>
+      <div class="card">
+        <h3>30-day returns</h3>
+        <p>No questions asked.</p>
+      </div>
+      <div class="card">
+        <h3>Questions?</h3>
+        <p><a href="thanks.html" id="card-contact-link">Contact us</a></p>
+      </div>
+    </section>
+
+    <p>Outbound link for testing: <a href="https://www.google.com" id="outbound-link" target="_blank" rel="noopener">google.com</a></p>
+  </main>
+
+  <footer>Trailhead Supply is a fictional store for analytics practice.</footer>
+
+  <script>
+    var count = parseInt(localStorage.getItem('cartCount') || '0', 10);
+    document.getElementById('cart-count').textContent = 'Cart: ' + count;
+  </script>
+</body>
+</html>
